@@ -1,19 +1,14 @@
-#include "main.h"
+nclude "main.h"
 
 /**
- * print_most_numbers - print numbers except 2 and 4
- * Return: Always 0 (success)
+ *   * print_line - prints a straight line
+ *    * @n: number of _ to be printed
  */
-void print_most_numbers(void)
+void print_line(int n)
 {
-		char n;
+		char c;
 
-			for (n = '0'; n <= '9'; n++)
-			{
-								if (n != '2' && n != '4')
-						        	{									
-												_putchar(n);
-								}
-			}
+			for (c = 0; c < n; c++)
+						_putchar('_');
 				_putchar('\n');
 }
