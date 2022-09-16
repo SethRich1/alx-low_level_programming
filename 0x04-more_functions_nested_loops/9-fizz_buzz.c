@@ -1,32 +1,28 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * main - entry point
- * @void: no arguments
- * Return: 0 Always (success)
+ * main  - the entry point
+ *
+ * Return: 0 if the program run with success
  */
 int main(void)
 {
-		int i;
+	int a = 0, b = 0, c = 0;
 
-			for (i = 1; i < 100; i++)
-						if (i % 15 == 0)
-									{
-													printf("FizzBuzz ");
-															}
-					else if (i % 5 == 0)
-								{
-												printf("Buzz ");
-														}
-					else if (i % 3 == 0)
-								{
-												printf("Fizz ");
-														}
-					else
-								{
-												printf("%d ", i);
-														}
-				printf("Buzz");
-					printf("\n");
-						return (0);
+	for (a = 1; a < 101; a++)
+	{
+		b = a % 3;
+		c = a % 5;
+		if (b == 0 && c == 0)
+			printf("FizzBuzz");
+		else if (c == 0 && b != 0)
+			printf("Buzz");
+		else if (b == 0 && c != 0)
+			printf("Fizz");
+		else
+			printf("%d", a);
+		if (a < 100)
+			putchar(' ');
+	}
+	putchar('\n');
+	return (0);
 }
