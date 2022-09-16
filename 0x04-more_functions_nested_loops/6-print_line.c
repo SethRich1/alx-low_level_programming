@@ -1,14 +1,21 @@
-nclude "main.h"
-
+#include "main.h"
 /**
- *   * print_line - prints a straight line
- *    * @n: number of _ to be printed
+ * print_line - A function who print lines n times
+ *
+ * @n: number of times to print line
+ *
+ * Return: Does not return anything
  */
 void print_line(int n)
 {
-		char c;
+	int i;
 
-			for (c = 0; c < n; c++)
-						_putchar('_');
-				_putchar('\n');
+	if (n > 0)
+	{
+		for (i = 0; i < n; i++)
+		{
+			_putchar('_');
+		}
+	}
+	_putchar('\n');
 }
